@@ -33,8 +33,14 @@ const App = () => {
     <div className="App">
       <Header/>
       <div className='container'>
+        <div>
           <ContactForm fnDataAdd={addData}/>
-          <Contact data={dataKontak}/>
+        </div>
+        <div>
+          {dataKontak.map((contact,index) => (
+              <Contact data={contact} key={index}/>
+          ))}
+        </div>
       </div>
     </div>
   );

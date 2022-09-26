@@ -9,22 +9,15 @@ const Contact = ({ data }) => {
     // Contact berisi foto, nama, telepon, dan email
     return (
     <div className='containerContact'>
-        {data.map(contact => {
-            return (
-                <>
         <div className='slideWrapper'>
-            <img src={contact.photo} className='poto'/>
+            <img src={data.photo} className='poto'/>
             <div className='contactList'>
-                {contact.name}<br/>
-                {contact.phone}<br/>
-                {contact.email}<br/>
+                {data.name}<br/>
+                {data.phone}<br/>
+                {data.email}<br/>
             </div>
         </div>
-            <div className='line'/>
-            </>
-            )
-        })}
-       
+            <div className='line'/>  
     </div>
     );
 };
