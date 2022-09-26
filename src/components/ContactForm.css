@@ -1,0 +1,24 @@
+.page{
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    background-color: rgb(247, 180, 190);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    /* flex: 1; */
+}
+
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    /* background-color: aqua; */
+}
+
+.containerForm .input{
+    margin-bottom: 10px;
+    background-color: rgb(238, 238, 240);
+}
+
+.buttonContact{
+    text-align: left;
+}

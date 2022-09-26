@@ -1,4 +1,9 @@
+import { useEffect, useState } from 'react';
 import './App.css';
+import Contact from './components/Contact';
+import ContactForm from './components/ContactForm';
+import Header from './components/Header';
+import dataContacts from './data/contacts.json'
 
 // Uncomment untuk memuat daftar kontak
 // import contactsJSON from './data/contacts.json';
@@ -9,9 +14,28 @@ const App = () => {
 
   // Masukkan contacts yang sudah didapat dalam JSON sebagai initial state
   // Buatlah handler untuk menambahkan kontak baru yang akan dikirim ke ContactForm
+  const [dataKontak, setDataKontak] = useState(dataContacts)
+  const addData = (newNama,newHp,newEmail,newPhoto) => {
+    const objContact = {
+      name:newNama,
+      phone:newHp,
+      email:newEmail,
+      photo:newPhoto
+    }
 
+    
+    const newContact = [...dataKontak, objContact];
+    console.log('new Contact ', newContact)
+    setDataKontak(newContact)
+  }
+  
   return (
     <div className="App">
+      <Header/>
+      <div className='container'>
+          <ContactForm fnDataAdd={addData}/>
+          <Contact data={dataKontak}/>
+      </div>
     </div>
   );
 };

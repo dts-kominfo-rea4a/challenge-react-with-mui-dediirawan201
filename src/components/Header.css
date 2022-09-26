@@ -1,0 +1,25 @@
+.containerHeader{
+    width: 100vw;
+}
+
+.wrapperHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    padding:10px
+}
+.lineLeft{
+    height: 2px;
+    flex: 1;
+    align-self: center;
+    background-color: rgb(214, 207, 207);
+}
+
+.lineRight{
+    height: 2px;
+    flex: 1;
+    align-self: center;
+    background-color: rgb(214, 207, 207);
+}
